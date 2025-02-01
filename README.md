@@ -1,4 +1,85 @@
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+import java.util.Scanner;
 
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ScriptEngineManager manager = new ScriptEngineManager();
+        ScriptEngine engine = manager.getEngineByName("JavaScript");
+
+        System.out.println("Welcome to the Java Calculator!");
+        System.out.println("Enter an arithmetic expression (or type 'exit' to quit):");
+
+        while (true) {
+            System.out.print("> ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+
+            try {
+                Object result = engine.eval(input);
+                System.out.println("Result: " + result);
+            } catch (ScriptException e) {
+                System.out.println("Invalid expression! Please try again.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+        while (true) {
+            System.out.print("> ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+
+            try {
+                Object result = engine.eval(input);
+                System.out.println("Result: " + result);
+            } catch (ScriptException e) {
+                System.out.println("Invalid expression! Please try again.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+        System.out.println("Welcome to the Java Calculator!");
+        System.out.println("Enter an arithmetic expression (or type 'exit' to quit):");
+
+        while (true) {
+            System.out.print("> ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                System.out.println("Goodbye!");
+                break;
+            }
+
+            try {
+                Object result = engine.eval(input);
+                System.out.println("Result: " + result);
+            } catch (ScriptException e) {
+                System.out.println("Invalid expression! Please try again.");
+            }
+        }
+
+        scanner.close();
+    }
+}
 <!--
     Copyright (c) 2023, Oracle and/or its affiliates.
 
